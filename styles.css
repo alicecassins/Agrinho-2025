@@ -3,16 +3,16 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
+    background-color:rgb(184, 210, 232);
     color: #000000;
-    font-size: 1rem;
+    font-size: 1,3rem;
     margin: 0;
     padding: 0;
     transition: font-size 0.3s ease;
 }
 
 header {
-    background-color: #000000;
+    background-color: #178faa;
 }
 
 nav a.nav-link {
@@ -23,12 +23,12 @@ nav a.nav-link {
 
 nav a.nav-link:hover,
 nav a.nav-link:focus {
-    color: #ff3b3b;
+    color: #1d555d;
     text-decoration: underline;
 }
 
 .inicio-fundo {
-    background: linear-gradient(135deg, #ff7b00 0%, #ff3b3b 100%);
+    background: linear-gradient(135deg, #0197b9 0%, #00d0ff 100%);
     color: white;
     padding: 2rem;
     border-radius: 20px;
@@ -37,14 +37,14 @@ nav a.nav-link:focus {
 }
 
 .btn-danger {
-    background-color: #ff3b3b;
+    background-color: #163950;
     border: none;
     transition: background-color 0.3s ease;
 }
 
 .btn-danger:hover,
 .btn-danger:focus {
-    background-color: #cc2a2a;
+    background-color: #1c424e;
 }
 
 h2 {
@@ -59,7 +59,7 @@ h2 {
 }
 
 .list-group-item.bg-light {
-    background-color: #f1f1f1 !important;
+    background-color: #b8dde8 !important;
 }
 
 #contato .formulario {
@@ -74,7 +74,7 @@ h2 {
 }
 
 #contato button {
-    background-color: #28a745;
+    background-color: #70cce6;
     border: none;
     font-weight: 700;
     cursor: pointer;
@@ -83,7 +83,7 @@ h2 {
 
 #contato button:hover,
 #contato button:focus {
-    background-color: #1e7e34;
+    background-color: #15555c;
 }
 
 .menu-acessibilidade {
@@ -156,4 +156,16 @@ h2 {
 .alto-contraste button {
     background-color: #ffea00 !important;
     color: #000 !important;
+}
+
+.titulo-problema {
+  color: #164e50; /* roxo escuro */
+}
+
+.titulo-solucao {
+  color: #61a0c0; /* verde escuro estiloso */
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  text-shadow: 1px 1px 3px #ccc;
+  display: inline-block;
 }
