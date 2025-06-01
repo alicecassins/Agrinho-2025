@@ -1,200 +1,159 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
-:root {
-    --laranja-claro: #d900ff;
-    --alto-contraste-fundo: #000000;
-    --alto-contraste-texto: #f2c3ff;
-    --alto-contraste-link: #ffd700;
-}
-
 body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #000000;
     font-size: 1rem;
-    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    transition: font-size 0.3s ease;
 }
 
 header {
-    background-color: #d900ff;
+    background-color: #000000;
 }
 
-
-section {
-    padding-bottom: 5rem;
-}
-
-
-.nav-link {
-    color: #401e56;
+nav a.nav-link {
+    color: #eee;
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a.nav-link:hover,
+nav a.nav-link:focus {
+    color: #ff3b3b;
+    text-decoration: underline;
 }
 
 .inicio-fundo {
-    /* aula 3 */
-    background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    background-position: right;
-    border-radius: 80px;
-    width: 100%;
-    height: 606px;
-    padding: 40px;
-    margin: 0 auto;
+    background: linear-gradient(135deg, #ff7b00 0%, #ff3b3b 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #ff3b3baa;
+    overflow: hidden;
 }
 
-/* posicionamento para a imagem à direita */
-.img-inicio {
-    position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
-    height: auto;
-}
-
-
-.esquerda-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-
-.botao-inicio {
-    background-color: var(--laranja-claro);
-    border-radius: 30px;
+.btn-danger {
+    background-color: #ff3b3b;
     border: none;
-    width: 14em;
-    height: 3em;
-    align-content: center;
-
+    transition: background-color 0.3s ease;
 }
 
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: #cc2a2a;
 }
-
-
-#tropicalia {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
-}
-
-#tropicalia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
-}
-
 
 h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
+    font-family: 'Lemon', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-#galeria {
-    background-color: #edd4ff;
-
+.list-group-item {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
-.fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
+.list-group-item.bg-light {
+    background-color: #f1f1f1 !important;
 }
 
-#contato {
-    background-image: url('img/4965007.jpg');
-    background-size: cover;
-    padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
-}
-
-.formulario {
-    background-color: #ffffff;
+#contato .formulario {
+    background-color: white;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
-    border-radius: 10px;
-    /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
-    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ddd;
 }
 
-.formulario button {
-    background-color: #401e56;
+#contato label {
+    font-weight: 600;
+}
+
+#contato button {
+    background-color: #28a745;
     border: none;
-    font-weight: bold;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.form-control {
-    background-color: #F1EDEF;
+#contato button:hover,
+#contato button:focus {
+    background-color: #1e7e34;
 }
-.menu-acessibilidade{
+
+.menu-acessibilidade {
     position: fixed;
-    top:2rem;
-    right:20px;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); /* fundo semi-transparente */
+    padding: 1rem 1.5rem; /* espaço interno maior */
+    border-radius: 12px; /* arredondar as bordas pra ficar mais suave */
     z-index: 1000;
-}
-
-.rotacao-botao{
-    transform: rotate(-90deg);
-    transform-origin: right center;
-}
-
-.opcoes-acessibilidade{
-    margin-top:10px;
     display: flex;
     flex-direction: column;
+    gap: 0.5rem; /* espaçamento entre os botões */
+    max-width: 200px; /* limita a largura pra não ficar gigante */
 }
 
-.opcoes-acessibilidade button{
-    margin-bottom: 5px;
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+    transition: transform 0.3s ease;
 }
-.apresenta-lista{
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.opcoes-acessibilidade button {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.opcoes-acessibilidade button:hover,
+.opcoes-acessibilidade button:focus {
+    background-color: #ff3b3b;
+    border-color: #cc2a2a;
+    outline: none;
+}
+
+.apresenta-lista {
     display: none;
 }
 
-.alto-contraste{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+.alto-contraste {
+    background-color: #000 !important;
+    color: #fffa;
 }
 
 .alto-contraste header,
 .alto-contraste footer,
-.alto-contraste .formulario{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+.alto-contraste .formulario {
+    background-color: #000 !important;
+    color: #fffa !important;
 }
 
-.alto-contraste .nav-link{
-    color: var(--alto-contraste-link);
+.alto-contraste nav a.nav-link {
+    color: #ffea00 !important;
 }
 
-.alto-contraste .botao-inicio,
-.alto-contraste .formulario button,
-.alto-contraste .btn-primary{
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
-}
-
-.alto-contraste #tropicalia {
-    background: none;
-}
-
-.alto-contraste #galeria {
-    background-color: var(--alto-contraste-fundo);
-}
-.alto-contraste .fundo-galeria {
-    background: none;
+.alto-contraste .btn-danger,
+.alto-contraste button {
+    background-color: #ffea00 !important;
+    color: #000 !important;
 }
